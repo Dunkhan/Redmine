@@ -34,18 +34,19 @@ platforms :jruby do
 end
 
 group :mysql do
-  gem "mysql", "~> 2.8.1", :platforms => :mri_18
-  gem "mysql2", "~> 0.3.11", :platforms => :mri_19
+  #gem "mysql", "~> 2.8.1", :platforms => :mri_18
+  #gem "mysql2", "~> 0.3.11", :platforms => :mri_19
+  gem "mysql2", "~> 0.3.11"
 end
 
 # TO_DO: Add support for PostgreSQL and Sqlite as
 # for now Redmine quickstart works with MySQL
 # group :postgres do
-   gem "pg", ">= 0.11.0"
+#   gem "pg", ">= 0.11.0"
 # end
 
 # group :sqlite3 do
-   gem "sqlite3"
+#   gem "sqlite3"
 # end
 
 group :development do
