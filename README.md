@@ -49,3 +49,5 @@ the password for the Redmine admin user - see the Change password link at:
 Version
 -----------------------------------
 Redmine 2.4
+
+29/09/2017 - Migrate to openshift 3
