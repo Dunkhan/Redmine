@@ -5,38 +5,7 @@
 production:
   adapter:  mysql2
   database: <%= ENV['MYSQL_DATABASE'] %>
-  host:     <%= ENV['redmineDB_SERVICE_HOST'] %>
-  username: <%= ENV['MYSQL_USER'] %>
-  password: <%= ENV['MYSQL_PASSWORD'] %>
-  port:     <%= ENV['redmineDB_SERVICE_PORT'] %>
-  encoding: utf8
-
-development:
-  adapter:  mysql2
-  database: redmine_development
-  host:     <%= ENV['redmineDB_SERVICE_HOST'] %>
+  host:     <%= ENV['mysql_SERVICE_HOST'] %>
   username: <%= ENV['MYSQL_USER'] %>
   password: <%= ENV['MYSQL_PASSWORD'] %>
   encoding: utf8
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test:
-  adapter: mysql
-  database: redmine_test
-  host: localhost
-  username: root
-  password:
-  encoding: utf8
-
-test_pgsql:
-  adapter: postgresql
-  database: redmine_test
-  host: localhost
-  username: postgres
-  password: "postgres"
-
-test_sqlite3:
-  adapter: sqlite3
-  database: db/test.sqlite3
