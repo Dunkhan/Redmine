@@ -3,18 +3,18 @@
 # Examples for PostgreSQL and SQLite3 can be found at the end.
 
 production:
-  adapter:  postgresql
-  database: redmineDB
-  host:     <%= ENV['MYSQL_DATABASE'] %>
+  adapter:  mysql2
+  database: <%= ENV['MYSQL_DATABASE'] %>
+  host:     <%= ENV['redmineDB_SERVICE_HOST %>
   username: <%= ENV['MYSQL_USER'] %>
   password: <%= ENV['MYSQL_PASSWORD'] %>
-  port:     3306
+  port:     <%= ENV['redmineDB_SERVICE_HOST %>
   encoding: utf8
 
 development:
-  adapter:  postgresql
+  adapter:  mysql2
   database: redmine_development
-  host:     <%= ENV['MYSQL_DATABASE'] %>
+  host:     <%= ENV['redmineDB_SERVICE_HOST %>
   username: <%= ENV['MYSQL_USER'] %>
   password: <%= ENV['MYSQL_PASSWORD'] %>
   encoding: utf8
