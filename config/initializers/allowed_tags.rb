@@ -1,0 +1,1 @@
+RedCloth3::ALLOWED_TAGS << "iframe"
