@@ -5,10 +5,10 @@
 production:
   adapter:  mysql2
   database: <%= ENV['MYSQL_DATABASE'] %>
-  host:     127.0.0.1
+  host:     <%= ENV['redmineDB_SERVICE_HOST'] %>
   username: <%= ENV['MYSQL_USER'] %>
   password: <%= ENV['MYSQL_PASSWORD'] %>
-  port:     <%= ENV['redmineDB_SERVICE_HOST'] %>
+  port:     <%= ENV['redmineDB_SERVICE_PORT'] %>
   encoding: utf8
 
 development:
