@@ -4,19 +4,19 @@
 
 production:
   adapter:  postgresql
-  database: <%= ENV['OPENSHIFT_APP_NAME'] %>
-  host:     <%= ENV['POSTGRESQL_SERVICE_HOST'] %>
-  username: <%= ENV['OPENSHIFT_MYSQL_DB_USERNAME'] %>
-  password: <%= ENV['OPENSHIFT_MYSQL_DB_PASSWORD'] %>
-  port:     <%= ENV['POSTGRESQL_SERVICE_PORT'] %>
+  database: <%= ENV['MYSQL_DATABASE'] %>
+  host:     mysql://mysql
+  username: <%= ENV['MYSQL_USER'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] %>
+  port:     3306
   encoding: utf8
 
 development:
   adapter:  postgresql
   database: redmine_development
-  host:     <%= ENV['POSTGRESQL_SERVICE_HOST'] %>
-  username: <%= ENV['OPENSHIFT_MYSQL_DB_USERNAME'] %>
-  password: <%= ENV['OPENSHIFT_MYSQL_DB_PASSWORD'] %>
+  host:     mysql://mysql
+  username: <%= ENV['MYSQL_USER'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] %>
   encoding: utf8
 
 # Warning: The database defined as "test" will be erased and
