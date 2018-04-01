@@ -8,4 +8,5 @@ production:
   host:     <%= ENV['MYSQL_SERVICE_HOST'] %>
   username: root
   password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>
+  port:  3306
   encoding: utf8
